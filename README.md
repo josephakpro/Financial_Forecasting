@@ -106,8 +106,8 @@ Financial_Forecasting/
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/YourUsername/Financial-Forecasting-Dashboard.git
-cd Financial-Forecasting-Dashboard
+git clone https://github.com/josephakpro/Financial_Forecasting.git
+cd Financial_Forecasting
 
 ```
 
@@ -117,5 +117,8 @@ pip install -r requirements.txt
 
 ```
 
-3. **Run the analysis:**
-Navigate to the `notebooks/` directory and execute the Jupyter Notebooks sequentially to reproduce the data preparation, modeling, and forecasting steps.
+3. **Run the Interactive Streamlit Dashboard:**
+ ```bash
+ streamlit run app.py
+
+```
