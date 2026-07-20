@@ -6,11 +6,10 @@ A comprehensive data analysis and visualization project designed to evaluate his
 
 ## 🎯 Business Objective
 
-The primary goal of this project is to empower financial institutions to make data-driven decisions. Specifically, the dashboard is built to:
+The primary goal of this project is to make data-driven decisions using an interactive dashboard built to:
 
 * **Predict** future loan demand accurately.
 * **Optimize** resources and capital allocation based on projected needs.
-* **Understand** historical and emerging financial trends.
 * **Evaluate** the impact of external economic drivers on core business metrics.
 * **Support** strategic planning and scenario-based risk management.
 
@@ -35,7 +34,6 @@ A deep dive into the historical patterns of the loan application data:
 * **Historical Trends:** Visualization of the monthly loan application time series.
 * **Seasonality:** Identification of monthly seasonality patterns.
 * **Decomposition:** Breakdown of the series into **Trend**, **Seasonal**, and **Residual** components.
-* **Anomaly Detection:** Highlighting unusual periods and outliers in the data.
 
 ### 3. Stationarity Analysis
 
@@ -87,19 +85,18 @@ Strategic forecasting tools for risk and capital management:
 ## 📂 Repository Structure
 
 ```text
+Financial_Forecasting/
+│
 ├── data/
-│   └── financial_forecasting_dataset.csv   # Raw and processed datasets
+│   └── financial_forecasting_dataset.csv
+│
 ├── notebooks/
-│   ├── 01_business_overview.ipynb          # EDA and KPI calculations
-│   ├── 02_time_series_stationarity.ipynb   # Decomposition, ACF/PACF, ADF tests
-│   ├── 03_economic_drivers.ipynb           # Correlation and exogenous variable prep
-│   └── 04_forecasting_and_scenarios.ipynb  # ARIMA/SARIMAX modeling and stress testing
-├── src/
-│   ├── data_cleaning.py                    # Imputation (LOCF) and formatting scripts
-│   └── model_evaluation.py                 # Expanding window CV and metric generation
-├── dashboard/                              # (Optional) Dashboard application files (e.g., Streamlit/Dash)
-├── README.md                               # Project documentation
-└── requirements.txt                        # Python dependencies
+│   ├── 01_Preprocessing_and_EDA.ipynb
+│   └── 02_Forecast_Modeling.ipynb
+│
+├── app.py                      <-- Interactive Streamlit Dashboard
+├── forecast_model.pkl          <-- Exported SARIMAX model object
+└── requirements.txt            <-- Python dependencies
 
 ```
 
@@ -114,13 +111,11 @@ cd Financial-Forecasting-Dashboard
 
 ```
 
-
 2. **Install dependencies:**
 ```bash
 pip install -r requirements.txt
 
 ```
-
 
 3. **Run the analysis:**
 Navigate to the `notebooks/` directory and execute the Jupyter Notebooks sequentially to reproduce the data preparation, modeling, and forecasting steps.
